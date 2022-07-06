@@ -19,7 +19,52 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         body{ font: 14px sans-serif; text-align: center; }
     </style>
 </head>
-<h1 class="my-5">Hallo, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. vul de Klachtenformulier in:</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="welcome.php">Home</a>
+  <a href="form.php">Form</a>
+  <a href="Register.php">Register</a>
+  <a href="#about">About</a>
+</div>
+
+</div>
+
+</body>
+<h1 class="my-5">Welkom, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</h1>
 
     <p>
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
